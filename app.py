@@ -310,7 +310,7 @@ if menu == "Dashboard de Fundos":
         st.subheader("Detalhes do Fundo")
 
         # Caminho fixo para o arquivo Excel
-        fonte_excel = r"C:\Users\AntônioRocha\OneDrive - Gama\Área de Trabalho\teste_metricas\Taxas Fundos.xlsx"
+        fonte_excel = r"Taxas Fundos.xlsx"
         
         # Carregar e exibir os detalhes do fundo
         detalhes_fundo = getMainData(font=fonte_excel, fund_name=fundo_selecionado)
