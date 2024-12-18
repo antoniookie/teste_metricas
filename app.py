@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import logging
-import matplotlib.pyplot as plt
+
 
 # Configurar o layout para ser amplo
 st.set_page_config(layout="wide")
