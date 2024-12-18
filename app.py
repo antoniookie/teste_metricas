@@ -364,7 +364,7 @@ if menu == "Dashboard de Fundos":
             fig.update_layout(
                 title=f'Cota e Benchmark - {fundo_selecionado}',
                 xaxis_title='Data',
-                yaxis_title='Valor',
+                yaxis_title='Rentabilidade',
                 template='plotly_white'
             )
             st.plotly_chart(fig, use_container_width=True)
