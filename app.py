@@ -3,7 +3,8 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import logging
-
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # Configurar o layout para ser amplo
 st.set_page_config(layout="wide")
@@ -73,14 +74,14 @@ def calculate_rentability(data, fund_name):
             alpha = fund_return - benchmark_return
 
             results['Período'].append(period_name)
-            results['Fundo'].append(f'{fund_return:.2f}%')
-            results['Benchmark'].append(f'{benchmark_return:.2f}%')
-            results['Alpha'].append(f'{alpha:.2f}%')
+            results['Fundo'].append(fund_return)  # Armazenar como float
+            results['Benchmark'].append(benchmark_return)  # Armazenar como float
+            results['Alpha'].append(alpha)  # Armazenar como float
         else:
             results['Período'].append(period_name)
-            results['Fundo'].append('N/A')
-            results['Benchmark'].append('N/A')
-            results['Alpha'].append('N/A')
+            results['Fundo'].append(np.nan)
+            results['Benchmark'].append(np.nan)
+            results['Alpha'].append(np.nan)
 
     return pd.DataFrame(results)
 
@@ -403,7 +404,6 @@ if menu == "Dashboard de Fundos":
 
             fig_annual_returns.update_layout(
                 title="Retornos Anuais (%) - Fundo vs Benchmark",
-                xaxis_title="Ano",
                 yaxis_title="Retorno (%)",
                 template="plotly_white",
                 xaxis=dict(
