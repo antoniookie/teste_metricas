@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import logging
-import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Configurar o layout para ser amplo
