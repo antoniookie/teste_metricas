@@ -482,10 +482,7 @@ if menu == "Dashboard de Fundos":
             if tabela_periodos.empty:
                 st.write("Nenhum dado disponível para calcular a rentabilidade por períodos.")
             else:
-                styled_tabela_periodos = tabela_periodos.style.format("{:.2f}%").applymap(
-                    highlight_values, subset=["Fundo", "Benchmark", "Alpha"]
-                )
-                st.dataframe(styled_tabela_periodos, use_container_width=True)
+                tabela_periodos[['Fundo', 'Benchmark', 'Alpha']] = tabela_periodos[['Fundo', 'Benchmark', 'Alpha']].apply(pd.to_numeric, errors='coerce')
 
             # Adicionando o Gráfico de PL do Fundo
             st.subheader(f"PL do Fundo - {fundo_selecionado}")
