@@ -737,7 +737,7 @@ elif menu == "Análise de Índices Bloomberg":
                     # =====================================================================
                     # Cálculo da correlação mensal fundo vs todos os índices
                     # =====================================================================
-                    st.subheader("Matriz de Correlação (Mensal) - Fundo vs Índices")
+                    st.subheader("(EM BREVE) Matriz de Correlação (Mensal) - Fundo vs Índices")
 
                     # Calcular retornos mensais do fundo (já divididos por 100)
                     fund_monthly_returns = fund_returns.loc[common_dates]
@@ -774,18 +774,18 @@ elif menu == "Análise de Índices Bloomberg":
                     if combined_df.empty:
                         st.write("Não há dados suficientes após alinhar datas para calcular a correlação mensal com o fundo.")
                     else:
-                        correlation_matrix = combined_df.corr()
-                        fig_corr, ax = plt.subplots(figsize=(12, 10))
-                        sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=True, ax=ax)
-                        plt.title("Matriz de Correlação: Retornos Mensais do Fundo e Índices")
-                        plt.xticks(rotation=45, ha='right')
-                        plt.yticks(rotation=0)
-                        st.pyplot(fig_corr)
+                        # correlation_matrix = combined_df.corr()
+                        # fig_corr, ax = plt.subplots(figsize=(12, 10))
+                        # sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=True, ax=ax)
+                        # plt.title("Matriz de Correlação: Retornos Mensais do Fundo e Índices")
+                        # plt.xticks(rotation=45, ha='right')
+                        # plt.yticks(rotation=0)
+                        # st.pyplot(fig_corr)
 
                     # =====================================================================
                     # Gráfico de Evolução da Correlação entre o Índice Selecionado e o Fundo
                     # =====================================================================
-                    st.subheader(f"Evolução da Correlação entre {fundo_selecionado} e {ticker_selecionado}")
+                    st.subheader(f"(EM BREVE) Evolução da Correlação entre {fundo_selecionado} e {ticker_selecionado}")
 
                     # Definir o nome exato da coluna de retorno do índice selecionado
                     corr_column = f'Retorno Mensal {ticker_selecionado} (%)'
