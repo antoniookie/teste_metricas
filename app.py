@@ -785,7 +785,7 @@ elif menu == "Análise de Índices Bloomberg":
                     # =====================================================================
                     # Gráfico de Evolução da Correlação entre o Índice Selecionado e o Fundo
                     # =====================================================================
-                    st.subheader(f"(EM BREVE) Evolução da Correlação entre {fundo_selecionado} e {ticker_selecionado}")
+                     st.subheader(f"(EM BREVE) Evolução da Correlação entre {fundo_selecionado} e {ticker_selecionado}")
 
                     # Definir o nome exato da coluna de retorno do índice selecionado
                     corr_column = f'Retorno Mensal {ticker_selecionado} (%)'
