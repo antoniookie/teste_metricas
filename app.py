@@ -89,9 +89,9 @@ def calculate_rolling_returns(data, column='Cota'):
     Calcula os retornos móveis de 12m, 24m e 36m, ajustando para fundos com menos de 36 meses de dados.
     Agora utilizando deslocamentos mensais ao invés de dias.
     """
-    data['Retorno 12m'] = ((data[column] / data[column].shift(12)) - 1) * 100  # 12 meses
-    data['Retorno 24m'] = ((data[column] / data[column].shift(24)) - 1) * 100  # 24 meses
-    data['Retorno 36m'] = ((data[column] / data[column].shift(36)) - 1) * 100  # 36 meses
+    data['Retorno 12m'] = ((data[column] / data[column].shift(252)) - 1) * 100  # 12 meses
+    data['Retorno 24m'] = ((data[column] / data[column].shift(504)) - 1) * 100  # 24 meses
+    data['Retorno 36m'] = ((data[column] / data[column].shift(756)) - 1) * 100  # 36 meses
 
     return data
 
